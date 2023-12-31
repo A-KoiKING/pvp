@@ -1,0 +1,7 @@
+{
+    "values":[
+        "pvp:system/main",
+        "delta:internal/technical/tick",
+        "mh_rpgish:tick"
+    ]
+}

@@ -1,0 +1,73 @@
+[
+    {
+        "function": "minecraft:set_name",
+        "entity": "this",
+        "name": {
+          "text":"盾",
+          "color":"white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+    },
+    {
+        "function": "minecraft:set_lore",
+        "lore": [
+          {
+            "text": "苛烈な攻撃を防ぐ盾",
+            "color": "white",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "3秒しゃがむと前方に突進して、",
+            "color": "white",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "進行方法のオブジェクトを破壊する。",
+            "color": "white",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "クールタイム:7秒",
+            "color": "white",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          }
+        ],
+        "replace": true
+    },
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:knockback": 3,
+        "minecraft:vanishing_curse": 1
+      }
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Unbreakable:1}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:7}"
+    }
+  ]
+  

@@ -1,0 +1,1 @@
+tellraw @s ["",{"text":"-----------------------","color":"gold"},{"text":"\n\n \u0020 "},{"text":"\u30a4\u30f3\u30b9\u30c8\u30fc\u30eb\u306b\u6210\u529f\u3057\u307e\u3057\u305f\uff01","color":"yellow"},{"text":"\n\n"},{"text":"-----------------------","color":"gold"}]

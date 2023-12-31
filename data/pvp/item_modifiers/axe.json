@@ -1,0 +1,76 @@
+[
+    {
+      "function": "minecraft:set_name",
+      "entity": "this",
+      "name": {
+        "text":"斧",
+        "color":"white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      }
+    },
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": "PVP用の斧",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "見た目以上によく掘れる",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:efficiency": 5,
+        "minecraft:vanishing_curse": 1
+      }
+    },
+    {
+      "function": "minecraft:set_attributes",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "name": "damage",
+          "amount": 0,
+          "operation": "addition",
+          "id": "580b3dd3-4f8d-4d21-a0d5-faf641348814",
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "name": "speed",
+          "amount": -3.1,
+          "operation": "addition",
+          "id": "18b071bb-b0e5-40e7-a71c-741a9c96aa00",
+          "slot": "mainhand"
+        }
+      ]
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Unbreakable:1}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:7}"
+    }
+  ]
+  

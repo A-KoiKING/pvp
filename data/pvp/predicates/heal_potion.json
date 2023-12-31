@@ -1,0 +1,27 @@
+[
+  {
+    "condition": "minecraft:entity_scores",
+    "entity": "this",
+    "scores": {
+      "potion_cooltime": 0
+    }
+  },
+  {
+    "condition": "minecraft:entity_properties",
+    "entity": "this",
+    "predicate": {
+      "type": "minecraft:player",
+      "flags": {
+        "is_sneaking": true
+      },
+      "equipment": {
+        "mainhand": {
+          "items": [
+            "minecraft:carrot_on_a_stick"
+          ],
+          "nbt": "{CustomModelData:1}"
+        }
+      }
+    }
+  }
+]

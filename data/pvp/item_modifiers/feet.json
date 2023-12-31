@@ -1,0 +1,67 @@
+[
+    {
+      "function": "minecraft:set_name",
+      "entity": "this",
+      "name": {
+        "text":"ハイジャンプブーツ",
+        "color":"white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      }
+    },
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": "高くすばやく移動できるブーツ",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "しゃがみながらジャンプすることで向いてる方向に跳べる",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:efficiency": 1,
+        "minecraft:vanishing_curse": 1
+      }
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Unbreakable:1}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:7}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Trim:{material:\"minecraft:netherite\",pattern:\"minecraft:snout\"}}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{display:{color:16777215}}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{CustomModelData:1}"
+    }
+  ]
+  

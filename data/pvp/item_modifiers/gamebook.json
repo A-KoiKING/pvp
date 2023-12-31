@@ -1,0 +1,55 @@
+[
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{pages:['[\"\",{\"text\":\"\\\\u25a0\\\\u25a0PVP GameBook\\\\u25a0\\\\u25a0\",\"bold\":true,\"color\":\"blue\"},{\"text\":\"\\\\n\\\\n\",\"color\":\"reset\"},{\"text\":\"\\\\u25a0\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u518d\\\\u5165\\\\u624b\",\"color\":\"black\"},{\"text\":\"\\\\n\",\"color\":\"reset\"},{\"text\":\" \",\"color\":\"dark_gray\"},{\"text\":\"\\\\u5263(\\\\u672a\\\\u5b9f\\\\u88c5)\",\"underlined\":true,\"color\":\"dark_gray\"},{\"text\":\"\\\\n \",\"color\":\"dark_gray\"},{\"text\":\"\\\\u76fe(\\\\u672a\\\\u5b8c\\\\u6210)\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/shield\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}},{\"text\":\"\\\\n \",\"color\":\"dark_gray\"},{\"text\":\"\\\\u30c4\\\\u30eb\\\\u30cf\\\\u30b7\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/pickel\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"},{\"text\":\"\\\\u65a7\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/axe\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"},{\"text\":\"\\\\u30b7\\\\u30e3\\\\u30d9\\\\u30eb\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/shovel\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"},{\"text\":\"\\\\u30cf\\\\u30b5\\\\u30df\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/shears\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}},{\"text\":\"\\\\n \",\"color\":\"reset\"},{\"text\":\"\\\\u30d2\\\\u30fc\\\\u30eb\\\\u30dd\\\\u30fc\\\\u30b7\\\\u30e7\\\\u30f3\",\"underlined\":true,\"color\":\"dark_gray\",\"clickEvent\":{\"action\":\"run_command\",\"value\":\"/function pvp:system/give/tool/potion\"},\"hoverEvent\":{\"action\":\"show_text\",\"contents\":\"\\\\u5fc5\\\\u305a\\\\u30aa\\\\u30d5\\\\u30cf\\\\u30f3\\\\u30c9\\\\u306b\\\\u30a2\\\\u30a4\\\\u30c6\\\\u30e0\\\\u3092\\\\u6301\\\\u3063\\\\u3066\\\\u3044\\\\u306a\\\\u3044\\\\u72b6\\\\u614b\\\\u3067\\\\u884c\\\\u3063\\\\u3066\\\\u304f\\\\u3060\\\\u3055\\\\u3044\\\\u3002\"}}]'],title:GameBook,author:pvp}"
+  },
+  {
+    "function": "minecraft:set_name",
+    "entity": "this",
+    "name": {
+      "text":"GameBook",
+      "color":"white",
+      "bold": false,
+      "italic": false,
+      "underlined": false,
+      "strikethrough": false,
+      "obfuscated": false
+    }
+  },
+  {
+    "function": "minecraft:set_lore",
+    "lore": [
+      {
+        "text": "初期アイテムをなくしてしまった場合、",
+        "color": "white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false
+      },
+      {
+        "text": "この本で再度入手することができます。",
+        "color": "white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false
+      }
+    ],
+    "replace": true
+  },
+  {
+    "function": "minecraft:set_enchantments",
+    "enchantments": {
+      "minecraft:vanishing_curse": 1
+    }
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{CustomModelData:1}"
+  },
+  {
+    "function": "minecraft:set_nbt",
+    "tag": "{HideFlags:7}"
+  }
+]
