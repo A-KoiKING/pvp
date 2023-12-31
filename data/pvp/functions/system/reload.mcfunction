@@ -26,6 +26,10 @@ scoreboard objectives add hp_value dummy
 scoreboard objectives add hp_before dummy
 scoreboard objectives add hp_time dummy
 
+scoreboard objectives add can_shield dummy
+
+scoreboard objectives add kill playerKillCount
+
 #初期化
 scoreboard players set $strength delta.api.launch 5000
 

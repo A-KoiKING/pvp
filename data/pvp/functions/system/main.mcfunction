@@ -12,8 +12,12 @@ execute as @a if predicate pvp:heal_potion run function pvp:system/heal_potion/c
 #mainhandにhealpotionを持ってスニークしていなかったらタグを0にする
 execute as @a unless predicate pvp:heal_potion run scoreboard players set @s can_potion 0
 
+#mainhandもしくはoffhandにシールドがありスニークしていたらcan_shieldを実行
+execute as @a if predicate pvp:main_shield run function pvp:system/shield/can_shield
+execute as @a if predicate pvp:off_shield run function pvp:system/shield/can_shield
+
 #足にjumpbootをつけていてスニークしたらcan_jumpを実行する
-execute as @a if predicate pvp:jump_boots unless predicate pvp:hand_potion run function pvp:system/jump_boots/can_jump
+execute as @a if predicate pvp:jump_boots unless predicate pvp:hand_potion unless predicate pvp:hand_main_shield unless predicate pvp:hand_off_shield run function pvp:system/jump_boots/can_jump
 
 #足にjumpbootをつけていてスニークしていなかったら処理を止める
 execute as @a unless predicate pvp:jump_boots run scoreboard players set @s jump 0

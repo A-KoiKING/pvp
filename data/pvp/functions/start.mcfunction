@@ -73,6 +73,8 @@ scoreboard players set @a hp_value 0
 scoreboard players set @a hp_time 0
 scoreboard players set @a hp_before 80
 
+scoreboard players set @a can_shield 0
+
 gamerule keepInventory false
 
 tellraw @a ["",{"text":"[GameBook]","underlined":true,"color":"blue","clickEvent":{"action":"run_command","value":"/function pvp:system/give/tool/gamebook"},"hoverEvent":{"action":"show_text","contents":"\u5fc5\u305a\u30aa\u30d5\u30cf\u30f3\u30c9\u306b\u30a2\u30a4\u30c6\u30e0\u3092\u6301\u3063\u3066\u306a\u3044\u72b6\u614b\u3067\u884c\u3063\u3066\u304f\u3060\u3055\u3044\u3002"}},{"text":"\u3092\u518d\u5165\u624b"}]
