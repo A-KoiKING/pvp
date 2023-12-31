@@ -12,4 +12,4 @@ execute as @a[gamemode=survival] run scoreboard players operation @s hp_value = 
 execute as @a[gamemode=survival] run scoreboard players operation @s hp_value *= #40 HPbar
 execute as @a[gamemode=survival] run scoreboard players operation @s hp_value /= @s hp_max
 
-execute as @s[scores={hp_time=1..}] at @s[scores={hp_time=1..}] run function pvp:system/hpbar/time
+execute as @a[scores={hp_time=1..}] at @s[scores={hp_time=1..}] run function pvp:system/hpbar/time
