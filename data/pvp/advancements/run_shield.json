@@ -9,7 +9,7 @@
             "entity": "this",
             "predicate": {
               "flags": {
-                "is_swimming": true
+                "is_sneaking": true
               },
               "equipment": {
                 "mainhand": {

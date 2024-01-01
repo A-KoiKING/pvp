@@ -27,6 +27,7 @@ scoreboard objectives add hp_before dummy
 scoreboard objectives add hp_time dummy
 
 scoreboard objectives add can_shield dummy
+scoreboard objectives add shield_jump dummy
 
 scoreboard objectives add kill playerKillCount
 

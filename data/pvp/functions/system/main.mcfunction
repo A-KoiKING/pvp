@@ -16,7 +16,7 @@ execute as @a unless predicate pvp:heal_potion run scoreboard players set @s can
 #Advancementで実行
 
 #足にjumpbootをつけていてスニークしたらcan_jumpを実行する
-execute as @a if predicate pvp:jump_boots unless predicate pvp:hand_potion unless predicate pvp:hand_main_shield unless predicate pvp:hand_off_shield run function pvp:system/jump_boots/can_jump
+execute as @a[scores={shield_jump=0}] if predicate pvp:jump_boots unless predicate pvp:hand_potion run function pvp:system/jump_boots/can_jump
 
 #足にjumpbootをつけていてスニークしていなかったら処理を止める
 execute as @a unless predicate pvp:jump_boots run scoreboard players set @s jump 0

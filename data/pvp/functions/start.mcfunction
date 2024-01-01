@@ -74,6 +74,7 @@ scoreboard players set @a hp_time 0
 scoreboard players set @a hp_before 80
 
 scoreboard players set @a can_shield 0
+scoreboard players set @a shield_jump 0
 
 gamerule keepInventory false
 
