@@ -1,5 +1,3 @@
-execute as @a at @a run playsound block.note_block.harp master @a ~ ~ ~ 1 2
-
 scoreboard players set @s can_jump 0
 
 scoreboard players add @s before_shield 1

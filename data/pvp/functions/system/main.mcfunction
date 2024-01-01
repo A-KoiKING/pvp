@@ -40,6 +40,7 @@ execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run gamemode
 execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run scoreboard players set @s death 0
 
 #shield_reset
+execute as @a[scores={before_shield=10000..}] run scoreboard players set @s before_shield 1000
 scoreboard players add @a before_shield 1
 execute as @a[scores={shield_jump=1}] run function pvp:system/shield/reset
 
