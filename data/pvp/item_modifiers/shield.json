@@ -25,7 +25,7 @@
             "obfuscated": false
           },
           {
-            "text": "3秒しゃがむと前方に突進して、",
+            "text": "3秒しゃがむと前方に3秒間突進して、",
             "color": "white",
             "bold": false,
             "italic": false,

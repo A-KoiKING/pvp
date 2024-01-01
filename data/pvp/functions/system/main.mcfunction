@@ -1,5 +1,6 @@
 #1秒を数える
  #MP回復処理
+ #shield_cooltime
 scoreboard players add $second second 1
 execute if score $second second matches 21 run function pvp:system/second/second
 
@@ -21,10 +22,6 @@ execute as @a[scores={shield_jump=0}] if predicate pvp:jump_boots unless predica
 #足にjumpbootをつけていてスニークしていなかったら処理を止める
 execute as @a unless predicate pvp:jump_boots run scoreboard players set @s jump 0
 execute as @a unless predicate pvp:jump_boots run scoreboard players set @s can_jump 0
-
-#potionのクールタイムをカウントする
-execute as @a[scores={potion_cooltime=1..}] run scoreboard players remove @s potion_cooltime 1
-execute as @a[scores={potion_cooltime=1}] at @a[scores={potion_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ~ ~ ~
 
 #pvp_startのtitleを表示
 execute as @a[scores={can_title=1..}] run function pvp:system/title_pvp

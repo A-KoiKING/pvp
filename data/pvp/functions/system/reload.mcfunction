@@ -29,6 +29,7 @@ scoreboard objectives add hp_time dummy
 scoreboard objectives add can_shield dummy
 scoreboard objectives add shield_jump dummy
 scoreboard objectives add before_shield dummy
+scoreboard objectives add shield_cooltime dummy
 
 scoreboard objectives add kill playerKillCount
 
@@ -41,8 +42,6 @@ scoreboard players set #6 XPBar 6
 scoreboard players set @a points 0
 scoreboard players set @a diff 0
 scoreboard players set @a level 0
-
-scoreboard players set @a potion_cooltime 0
 
 scoreboard players set $play play_pvp 0
 
