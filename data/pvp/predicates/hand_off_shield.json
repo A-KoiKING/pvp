@@ -7,7 +7,7 @@
           "items": [
             "minecraft:shield"
           ],
-          "nbt": "{CustomModelData:1}"
+          "nbt": "{HideFlags:7}"
         }
       }
     }
