@@ -28,6 +28,7 @@ scoreboard objectives add hp_time dummy
 
 scoreboard objectives add can_shield dummy
 scoreboard objectives add shield_jump dummy
+scoreboard objectives add before_shield dummy
 
 scoreboard objectives add kill playerKillCount
 
@@ -74,3 +75,5 @@ bossbar set time style notched_10
 bossbar set time visible false
 
 say Reloaded!
+
+scoreboard objectives add scoreboard dummy

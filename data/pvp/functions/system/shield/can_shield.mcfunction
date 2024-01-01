@@ -1,4 +1,6 @@
 #スニークしていたらカウントする
+execute unless score @s can_shield = @s before_shield run scoreboard players set @s can_shield 0
+scoreboard players operation @s before_shield = @s can_shield
 scoreboard players add @s can_shield 1
 
 scoreboard players set @s can_potion 0
