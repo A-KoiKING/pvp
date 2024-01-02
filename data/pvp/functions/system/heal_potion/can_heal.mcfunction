@@ -1,6 +1,8 @@
 #mainhandにhealpotionを持ってスニークしていたらカウントする
 scoreboard players add @s can_potion 1
 
+scoreboard players set @s can_jump 0
+
 #しゃがんでから0.5秒後に効果音を鳴らす
 execute as @a[scores={can_potion=10}] at @a[scores={can_potion=10}] run playsound minecraft:entity.generic.drink master @a ~ ~ ~ 0.4
 

@@ -1,3 +1,6 @@
+# orbの削除
+    kill @e[type=experience_orb]
+
 # レベル129 はポイントが 0~1002
     xp set @a 129 levels
     execute as @a store result score @s points run xp query @s points
