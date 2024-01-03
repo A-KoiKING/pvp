@@ -64,6 +64,7 @@ scoreboard players set @a points 0
 scoreboard players set @a diff 0
 scoreboard players set @a level 0
 scoreboard players set @a MP 100
+scoreboard players set @a MPcount 2000
 
 scoreboard players set @a death 0
 scoreboard players set $play play_pvp 1

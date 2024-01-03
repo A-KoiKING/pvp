@@ -25,7 +25,7 @@
             "obfuscated": false
           },
           {
-            "text": "3秒しゃがむと前方に3秒間突進して、",
+            "text": "1秒しゃがみながら構えると、",
             "color": "white",
             "bold": false,
             "italic": false,
@@ -34,7 +34,7 @@
             "obfuscated": false
           },
           {
-            "text": "進行方法のオブジェクトを破壊する。",
+            "text": "前方に一瞬突進して、",
             "color": "white",
             "bold": false,
             "italic": false,
@@ -43,7 +43,16 @@
             "obfuscated": false
           },
           {
-            "text": "クールタイム:7秒",
+            "text": "進行方法のオブジェクトをすべて破壊する。",
+            "color": "white",
+            "bold": false,
+            "italic": false,
+            "underlined": false,
+            "strikethrough": false,
+            "obfuscated": false
+          },
+          {
+            "text": "クールタイム:20秒",
             "color": "white",
             "bold": false,
             "italic": false,

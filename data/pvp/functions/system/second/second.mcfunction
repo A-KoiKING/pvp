@@ -1,7 +1,7 @@
-scoreboard players set $second second 1
-
 #MP回復処理
-execute as @a[scores={MP=..99}] run scoreboard players add @s MP 1
+execute as @a[scores={MPcount=..1999}] run scoreboard players add @s MPcount 1
+execute as @a run scoreboard players operation @s MP = @s MPcount
+execute as @a run scoreboard players operation @s MP /= #20 20
 
 #shield_cooltime
 execute as @a[scores={shield_cooltime=1..}] run scoreboard players remove @s shield_cooltime 1

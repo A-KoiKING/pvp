@@ -8,12 +8,14 @@ scoreboard objectives add can_jump dummy
 
 scoreboard objectives add second dummy
 
+scoreboard objectives add MPcount dummy
 scoreboard objectives add MP dummy
 scoreboard objectives add MPMax dummy
 scoreboard objectives add XPBar dummy
 scoreboard objectives add points dummy
 scoreboard objectives add diff dummy
 scoreboard objectives add level dummy
+scoreboard objectives add 20 dummy
 
 scoreboard objectives add death deathCount
 scoreboard objectives add play_pvp dummy
@@ -42,6 +44,7 @@ scoreboard players set #6 XPBar 6
 scoreboard players set @a points 0
 scoreboard players set @a diff 0
 scoreboard players set @a level 0
+scoreboard players set #20 20 20
 
 scoreboard players set $play play_pvp 0
 
@@ -74,5 +77,3 @@ bossbar set time style notched_10
 bossbar set time visible false
 
 say Reloaded!
-
-scoreboard objectives add scoreboard dummy
