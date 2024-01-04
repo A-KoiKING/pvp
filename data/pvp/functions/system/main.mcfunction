@@ -1,10 +1,9 @@
 #tickを数える
  #MP回復処理
+ #制限時間バーの毎秒減少
  #shield_cooltime
+ #potion_cooltime
 function pvp:system/second/second
-
-#制限時間バーの毎秒減少
-function pvp:system/time_bar
 
 #mainhandにhealpotionを持ってスニークしていたらタグを1にする
 execute as @a if predicate pvp:heal_potion run function pvp:system/heal_potion/can_heal
@@ -39,3 +38,6 @@ execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run scoreboa
 execute as @a[scores={before_shield=31..}] run scoreboard players set @s before_shield 0
 scoreboard players add @a before_shield 1
 execute as @a[scores={shield_jump=1}] run function pvp:system/shield/reset
+
+#追尾弓
+#execute as @e[type=arrow] at @s facing entity @e[limit=1,distance=50,type=#pvp:bow_target] eyes run tp @s ^ ^ ^2 ~ ~1

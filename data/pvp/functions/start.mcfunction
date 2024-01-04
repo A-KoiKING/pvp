@@ -44,12 +44,12 @@ item modify entity @a armor.feet pvp:feet
 recipe give @a *
 
 worldborder set 400
-worldborder set 40 600
+worldborder set 20 600
 worldborder damage amount 5
 worldborder damage buffer 3
 worldborder warning distance 20
 
-scoreboard players set $second playtime 600
+scoreboard players set $second playtime 12000
 bossbar set time players @a
 bossbar set time visible true
 
