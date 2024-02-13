@@ -39,5 +39,10 @@ execute as @a[scores={before_shield=31..}] run scoreboard players set @s before_
 scoreboard players add @a before_shield 1
 execute as @a[scores={shield_jump=1}] run function pvp:system/shield/reset
 
-#追尾弓
-#execute as @e[type=arrow] at @s facing entity @e[limit=1,distance=50,type=#pvp:bow_target] eyes run tp @s ^ ^ ^2 ~ ~1
+#bow
+# 飛び道具チェック 
+    execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
+
+    execute as @a at @s run function pvp:system/bow/shot
+
+scoreboard players reset @a bow
