@@ -11,7 +11,7 @@ execute if score @s can_jump matches 100.. run scoreboard players set $strength 
 
 #跳ぶ
 function delta:api/launch_looking
-playsound minecraft:entity.ender_dragon.flap master @a ~ ~ ~ 0.4
+playsound minecraft:entity.ender_dragon.flap master @a ^ ^1.65 ^0.0001 0.4
 
 #リセットする
 execute if score @s can_jump matches 1.. run scoreboard players set $strength delta.api.launch 5000

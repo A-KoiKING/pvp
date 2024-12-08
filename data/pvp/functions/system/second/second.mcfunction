@@ -8,8 +8,8 @@ function pvp:system/time_bar
 
 #shield_cooltime
 execute as @a[scores={shield_cooltime=1..}] run scoreboard players remove @s shield_cooltime 1
-execute as @a[scores={shield_cooltime=1}] at @a[scores={shield_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ~ ~ ~
+execute as @a[scores={shield_cooltime=1}] at @a[scores={shield_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ^ ^1.65 ^0.0001
 
 #potionのクールタイムをカウントする
 execute as @a[scores={potion_cooltime=1..}] run scoreboard players remove @s potion_cooltime 1
-execute as @a[scores={potion_cooltime=1}] at @a[scores={potion_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ~ ~ ~
+execute as @a[scores={potion_cooltime=1}] at @a[scores={potion_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ^ ^1.65 ^0.0001
