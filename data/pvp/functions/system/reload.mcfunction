@@ -52,6 +52,7 @@ scoreboard players set @a points 0
 scoreboard players set @a diff 0
 scoreboard players set @a level 0
 scoreboard players set #20 20 20
+xp set @a 100 levels
 
 scoreboard players set $play play_pvp 0
 
@@ -79,7 +80,7 @@ gamerule forgiveDeadPlayers false
 #タイマー,ゲージ初期化
 bossbar add time "安全地帯縮小完了までの残り時間"
 bossbar set time color red
-bossbar set time max 600
+bossbar set time max 12000
 bossbar set time style notched_10
 bossbar set time visible false
 
