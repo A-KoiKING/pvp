@@ -1,6 +1,6 @@
 #tickを数える
  #MP回復処理
- #制限時間バーの毎秒減少
+ #制限時間バー(bossbar)の毎秒減少
  #shield_cooltime
  #potion_cooltime
 function pvp:system/second/second
