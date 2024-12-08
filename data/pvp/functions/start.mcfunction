@@ -49,7 +49,7 @@ worldborder damage amount 5
 worldborder damage buffer 3
 worldborder warning distance 20
 
-scoreboard players set $second playtime 12000
+scoreboard players set $second playtime 12150
 bossbar set time players @a
 bossbar set time visible true
 
