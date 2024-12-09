@@ -1,0 +1,3 @@
+clear @s minecraft:carrot_on_a_stick{CustomModelData:2} 1
+give @s minecraft:carrot_on_a_stick{CustomModelData:1,display:{Name:'{"text":"ヒールポーション","color":"white","italic":false}',Lore:['{"text":"回復用の薬","color":"white","italic":false}','{"text":"5秒しゃがむと回復できる","color":"white","italic":false}','{"text":"クールタイム:15秒","color":"white","italic":false}']},Enchantments:[{id:"minecraft:vanishing_curse",lvl:1}],HideFlags:7}
+scoreboard players set @s potion_cooltime 0
