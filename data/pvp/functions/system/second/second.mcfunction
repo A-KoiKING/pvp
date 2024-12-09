@@ -13,3 +13,4 @@ execute as @a[scores={shield_cooltime=1}] at @a[scores={shield_cooltime=1}] run 
 #potionのクールタイムをカウントする
 execute as @a[scores={potion_cooltime=1..}] run scoreboard players remove @s potion_cooltime 1
 execute as @a[scores={potion_cooltime=1}] at @a[scores={potion_cooltime=1}] run playsound minecraft:block.note_block.bell master @a ^ ^1.65 ^0.0001
+execute as @a[scores={potion_cooltime=1}] at @a[scores={potion_cooltime=1}] run function pvp:system/heal_potion/heal_reset
