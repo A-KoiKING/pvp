@@ -21,13 +21,6 @@ scoreboard objectives add death deathCount
 scoreboard objectives add play_pvp dummy
 scoreboard objectives add playtime dummy
 
-scoreboard objectives add hp health
-scoreboard objectives add hp_max dummy
-scoreboard objectives add HPbar dummy
-scoreboard objectives add hp_value dummy
-scoreboard objectives add hp_before dummy
-scoreboard objectives add hp_time dummy
-
 scoreboard objectives add can_shield dummy
 scoreboard objectives add shield_jump dummy
 scoreboard objectives add before_shield dummy
@@ -41,6 +34,14 @@ scoreboard objectives add bow.range dummy
 scoreboard objectives add recursion dummy
 
 scoreboard objectives add kill playerKillCount
+
+# hp_bar
+scoreboard objectives add mh.hp dummy
+scoreboard objectives add mh.hp_max dummy
+scoreboard objectives add mh.hp_ratio dummy
+scoreboard objectives add Temporary dummy
+scoreboard objectives add Constant dummy
+scoreboard players set #40 Constant 40
 
 #初期化
 scoreboard players set $strength delta.api.launch 5000

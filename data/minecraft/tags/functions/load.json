@@ -1,7 +1,6 @@
 {
     "values":[
         "pvp:load",
-        "delta:internal/technical/load",
-        "mh_rpgish:load"
+        "delta:internal/technical/load"
     ]
 }

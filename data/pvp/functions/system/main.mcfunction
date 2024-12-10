@@ -28,7 +28,10 @@ execute as @a[scores={can_title=1..}] run function pvp:system/title_pvp
 function pvp:system/xp
 
 #HPバーの表示
-execute as @a[gamemode=survival] run function pvp:system/hpbar/hp_bar
+# 全てのモブとしての常時実行function
+execute as @e[type=#pvp:mobs] at @s run function pvp:system/mob/_
+# ダメージ表示用のitemエンティティとしての常時実行
+execute as @e[type=item,tag=DmgDisplay] if data entity @s {PortalCooldown:0} run kill @s
 
 #死んだらスペクテイターに変更
 execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run gamemode spectator @s
