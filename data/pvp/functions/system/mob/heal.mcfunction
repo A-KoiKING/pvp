@@ -7,4 +7,4 @@
 # Healthを元に戻す
     data modify entity @s Health set value 512.0f
 # HP表示
-    function mh_rpgish:hp_bar/apply/_
+    function pvp:system/hp_bar/apply/_

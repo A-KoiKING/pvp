@@ -57,8 +57,6 @@ xp set @a 100 levels
 
 scoreboard players set $play play_pvp 0
 
-scoreboard players set #40 HPbar 40
-
 #初期リス固定
 setworldspawn 0 180 0
 
