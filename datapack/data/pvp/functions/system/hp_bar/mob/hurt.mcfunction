@@ -8,7 +8,7 @@
 # HP表示
     function pvp:system/hp_bar/apply/_
 # ダメージ表示
-    function pvp:system/dmg_indicator/_
+    function pvp:system/hp_bar/dmg_indicator/_
 # 毒エフェクトかつmh.hp=1の時の処理...。
     
 # mh.hp<0で死亡処理
