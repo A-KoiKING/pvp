@@ -29,7 +29,7 @@ scoreboard objectives add shield_cooltime dummy
 scoreboard objectives add bow minecraft.used:bow
 scoreboard objectives add burstcount dummy
 scoreboard objectives add bow.count dummy
-scoreboard objectives add bow.Speed dummy
+scoreboard objectives add bow.spead dummy
 scoreboard objectives add bow.range dummy
 scoreboard objectives add recursion dummy
 
