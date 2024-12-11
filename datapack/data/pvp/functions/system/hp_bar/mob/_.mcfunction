@@ -5,4 +5,4 @@
 # HPが変更された時の検知
     execute unless data entity @s {Health:512.0f} run function pvp:system/hp_bar/mob/hp_changed
 # HP表示時間切れ
-    execute if data entity @s {PortalCooldown:1} run function pvp:system/hp_bar/reset
+    execute if data entity @s {PortalCooldown:1} run function pvp:system/hp_bar/mob/reset
