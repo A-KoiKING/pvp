@@ -53,7 +53,7 @@ scoreboard players set @a points 0
 scoreboard players set @a diff 0
 scoreboard players set @a level 0
 scoreboard players set #20 20 20
-xp set @a 100 levels
+xp set @a 99 levels
 
 scoreboard players set $play play_pvp 0
 
