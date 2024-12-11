@@ -66,6 +66,11 @@ scoreboard players set @a level 0
 scoreboard players set @a MP 100
 scoreboard players set @a MPcount 2000
 
+scoreboard players set @a hp_max 80
+scoreboard players set @a hp_value 0
+scoreboard players set @a hp_time 0
+scoreboard players set @a hp_before 80
+
 scoreboard players set @a death 0
 scoreboard players set $play play_pvp 1
 

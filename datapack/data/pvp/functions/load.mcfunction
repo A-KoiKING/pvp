@@ -43,6 +43,13 @@ scoreboard objectives add Temporary dummy
 scoreboard objectives add Constant dummy
 scoreboard players set #40 Constant 40
 
+scoreboard objectives add hp health
+scoreboard objectives add hp_max dummy
+scoreboard objectives add HPbar dummy
+scoreboard objectives add hp_value dummy
+scoreboard objectives add hp_before dummy
+scoreboard objectives add hp_time dummy
+
 #初期化
 scoreboard players set $strength delta.api.launch 5000
 
