@@ -47,6 +47,12 @@
                 "blocking": 1
             },
             "model": "item/shield_blocking"
+        },
+        {
+            "predicate": {
+                "custom_model_data":1
+            },
+            "model": "minecraft:item/shield_"
         }
     ]
 }
