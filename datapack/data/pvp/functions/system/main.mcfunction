@@ -32,10 +32,11 @@ function pvp:system/xp
 execute as @e[type=#pvp:mobs] at @s run function pvp:system/hp_bar/mob/_
 # ダメージ表示用のitemエンティティとしての常時実行
 execute as @e[type=item,tag=DmgDisplay] if data entity @s {PortalCooldown:0} run kill @s
-# プレイヤーのHPバー表示
-execute as @a[gamemode=survival] run function pvp:system/hp_bar/player/_
+## 消してから表示じゃないと見えなくなる
 # プレイヤーのHP表示用エンティティ
 kill @e[type=armor_stand,tag=HP]
+# プレイヤーのHPバー表示
+execute as @a[gamemode=survival] run function pvp:system/hp_bar/player/_
 
 #死んだらスペクテイターに変更
 execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run gamemode spectator @s
