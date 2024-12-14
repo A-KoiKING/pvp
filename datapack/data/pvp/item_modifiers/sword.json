@@ -64,7 +64,7 @@
         {
           "attribute": "minecraft:generic.movement_speed",
           "name": "run",
-          "amount": 0.08,
+          "amount": 0.06,
           "operation": "addition",
           "id": "2d58c3cd-adf3-4a8c-8c9e-f96cfa8cbad1",
           "slot": "mainhand"
@@ -82,6 +82,10 @@
     {
       "function": "minecraft:set_nbt",
       "tag": "{Unbreakable:true}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:7}"
     }
   ]
   
