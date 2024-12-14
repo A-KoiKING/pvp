@@ -1,3 +1,7 @@
+#耐性を付与
+effect give @s resistance 10 0 true
+execute as @s at @s run playsound minecraft:block.anvil.use master @s ^ ^1.65 ^0.0001 10 0.2
+
 #地形破壊
 summon armor_stand ^ ^ ^1 {Marker:true,NoGravity:true,Tags:["dig"]}
 
