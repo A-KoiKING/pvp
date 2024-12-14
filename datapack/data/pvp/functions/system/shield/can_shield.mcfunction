@@ -12,6 +12,8 @@ scoreboard players set @s can_potion 0
 
 scoreboard players set @s shield_jump 1
 
+effect give @s resistance 15 1
+
 #3秒間しゃがんだら発動
 execute if score @s can_shield matches 20..30 run function pvp:system/shield/shield
 
