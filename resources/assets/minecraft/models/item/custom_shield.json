@@ -1,9 +1,7 @@
 {
     "parent": "builtin/entity",
     "textures": {
-        "particle": "block/dark_oak_planks",
-        "shield": "item/custom_shield",
-        "shield_base_nopattern": "item/custom_shield"
+        "particle": "block/dark_oak_planks"
     },
     "display": {
         "thirdperson_righthand": {
