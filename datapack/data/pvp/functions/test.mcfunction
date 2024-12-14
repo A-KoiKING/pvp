@@ -1,0 +1,1 @@
+summon villager ~ ~ ~ {Health:100f,NoAI:1b,Attributes:[{Name:"generic.max_health",Base:100.0}]}
