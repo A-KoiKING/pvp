@@ -1,0 +1,91 @@
+[
+    {
+      "function": "minecraft:set_name",
+      "entity": "this",
+      "name": {
+        "text":"剣",
+        "color":"white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      }
+    },
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": "PVP用の剣",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "見た目以上に殴りやすい",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:vanishing_curse": 1
+      }
+    },
+    {
+      "function": "minecraft:set_attributes",
+      "modifiers": [
+        {
+          "attribute": "minecraft:generic.attack_damage",
+          "name": "damage",
+          "amount": 4,
+          "operation": "addition",
+          "id": "63f6db34-7ebf-435f-b175-70366c1a489b",
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.attack_speed",
+          "name": "speed",
+          "amount": 2,
+          "operation": "addition",
+          "id": "56b071bb-b0e5-40e7-a71c-532a9b3",
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.movement_speed",
+          "name": "run",
+          "amount": 0.13,
+          "operation": "addition",
+          "id": "2d58c3cd-adf3-4a8c-8c9e-f96cfa8cbad1",
+          "slot": "mainhand"
+        },
+        {
+          "attribute": "minecraft:generic.knockback_resistance",
+          "name": "speed",
+          "amount": 0.1,
+          "operation": "addition",
+          "id": "4f280ee3-68fa-4ce6-99f2-0eb6edaaa0e2",
+          "slot": "mainhand"
+        }
+      ]
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Unbreakable:true}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:7}"
+    }
+  ]
+  
