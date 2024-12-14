@@ -15,7 +15,7 @@ effect give @a night_vision infinite 0 true
 clear @a
 
 item replace entity @a weapon.offhand with shield
-item replace entity @a hotbar.0 with air
+item replace entity @a hotbar.0 with iron_sword
 item replace entity @a hotbar.1 with air
 item replace entity @a hotbar.2 with air
 item replace entity @a hotbar.3 with iron_pickaxe
@@ -30,6 +30,7 @@ item replace entity @a armor.legs with chainmail_leggings
 item replace entity @a armor.feet with leather_boots
 
 item modify entity @a weapon.offhand pvp:shield
+item modify entity @a hotbar.0 pvp:sword
 item modify entity @a hotbar.3 pvp:pickel
 item modify entity @a hotbar.4 pvp:axe
 item modify entity @a hotbar.5 pvp:shovel
