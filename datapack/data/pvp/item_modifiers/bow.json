@@ -1,0 +1,55 @@
+[
+    {
+      "function": "minecraft:set_name",
+      "entity": "this",
+      "name": {
+        "text":"弓",
+        "color":"white",
+        "bold": false,
+        "italic": false,
+        "underlined": false,
+        "strikethrough": false,
+        "obfuscated": false
+      }
+    },
+    {
+      "function": "minecraft:set_lore",
+      "lore": [
+        {
+          "text": "PVP用の弓",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        },
+        {
+          "text": "見た目以上に敵に吸い付く",
+          "color": "white",
+          "bold": false,
+          "italic": false,
+          "underlined": false,
+          "strikethrough": false,
+          "obfuscated": false
+        }
+      ],
+      "replace": true
+    },
+    {
+      "function": "minecraft:set_enchantments",
+      "enchantments": {
+        "minecraft:vanishing_curse": 1,
+        "infinity": 1
+      }
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{Unbreakable:true}"
+    },
+    {
+      "function": "minecraft:set_nbt",
+      "tag": "{HideFlags:0}"
+    }
+  ]
+  
