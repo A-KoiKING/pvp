@@ -57,9 +57,6 @@
 
 scoreboard players reset @a bow
 
-# スコアボードに値を格納
-execute as @a store result score display arrow_yaw run data get storage temp:arrow_data arrow_yaw
-execute as @a store result score display arrow_pitch run data get storage temp:arrow_data arrow_pitch
-
-# titleコマンドで表示
-execute as @a run title @a actionbar ["Yaw: ",{"score":{"name":"display","objective":"arrow_yaw"}}," Pitch: ",{"score":{"name":"display","objective":"arrow_pitch"}}]
+# 矢があるか教えて
+  execute as @a unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar "インベントリに矢がありません!"
+  execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""

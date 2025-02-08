@@ -29,6 +29,7 @@ item replace entity @a armor.head with chainmail_helmet
 item replace entity @a armor.chest with chainmail_chestplate
 item replace entity @a armor.legs with chainmail_leggings
 item replace entity @a armor.feet with leather_boots
+item replace entity @a inventory.0 with arrow 1
 
 item modify entity @a weapon.offhand pvp:shield
 item modify entity @a hotbar.0 pvp:sword
@@ -43,6 +44,7 @@ item modify entity @a armor.head pvp:helmet
 item modify entity @a armor.chest pvp:chest
 item modify entity @a armor.legs pvp:legs
 item modify entity @a armor.feet pvp:feet
+item modify entity @a inventory.0 pvp:arrow
 
 recipe give @a *
 

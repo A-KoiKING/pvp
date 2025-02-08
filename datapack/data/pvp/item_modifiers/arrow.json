@@ -3,8 +3,8 @@
       "function": "minecraft:set_name",
       "entity": "this",
       "name": {
-        "text":"弓",
-        "color":"white",
+        "text":"矢",
+        "color":"red",
         "bold": false,
         "italic": false,
         "underlined": false,
@@ -16,8 +16,8 @@
       "function": "minecraft:set_lore",
       "lore": [
         {
-          "text": "PVP用の弓",
-          "color": "white",
+          "text": "PVP用の矢",
+          "color": "dark_red",
           "bold": false,
           "italic": false,
           "underlined": false,
@@ -25,8 +25,8 @@
           "obfuscated": false
         },
         {
-          "text": "見た目以上に敵に吸い付く",
-          "color": "white",
+          "text": "無くすと結構まずいかも...",
+          "color": "dark_red",
           "bold": false,
           "italic": false,
           "underlined": false,
