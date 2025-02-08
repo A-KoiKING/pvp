@@ -11,6 +11,7 @@ effect give @a minecraft:instant_health 1 20 true
 effect give @a minecraft:resistance 8 5 true
 effect give @a glowing infinite 0 true
 effect give @a night_vision infinite 0 true
+effect give @a slow_falling 3 1 true
 
 clear @a
 
