@@ -1,5 +1,5 @@
 # パーティクル
-    execute if entity @s[scores={bow.count=2..}] run particle electric_spark ~ ~ ~ 0.05 0.05 0.05 0.1 1 force @a[distance=..120]
+    execute if entity @s[scores={bow.count=1..}] run particle electric_spark ~ ~ ~ 0.05 0.05 0.05 0.1 1 force @a[distance=..120]
     
 # 再帰カウントが0なら弾速からセット
     execute unless entity @s[scores={recursion=1..}] run scoreboard players operation @s recursion = @s bow.spead
