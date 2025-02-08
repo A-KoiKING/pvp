@@ -35,6 +35,10 @@ scoreboard objectives add recursion dummy
 
 scoreboard objectives add kill playerKillCount
 
+# bow
+scoreboard objectives add arrow_yaw dummy
+scoreboard objectives add arrow_pitch dummy
+
 # hp_bar
 scoreboard objectives add mh.hp dummy
 scoreboard objectives add mh.hp_max dummy
@@ -64,6 +68,10 @@ scoreboard players set @a MP 100
 scoreboard players set @a MPcount 2000
 
 scoreboard players set $play play_pvp 0
+
+# -1 を保存する仮想プレイヤーを設定
+scoreboard players set #neg arrow_pitch -1
+scoreboard players set #neg arrow_yaw -1
 
 #初期リス固定
 setworldspawn 0 180 0

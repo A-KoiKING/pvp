@@ -49,8 +49,17 @@
 
 # bow
  # 飛び道具チェック 
-    execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
 
-    execute as @a at @s run function pvp:system/bow/shot
+  execute as @a at @s run function pvp:system/bow/shot
+  execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
+
+    
 
 scoreboard players reset @a bow
+
+# スコアボードに値を格納
+execute as @a store result score display arrow_yaw run data get storage temp:arrow_data arrow_yaw
+execute as @a store result score display arrow_pitch run data get storage temp:arrow_data arrow_pitch
+
+# titleコマンドで表示
+execute as @a run title @a actionbar ["Yaw: ",{"score":{"name":"display","objective":"arrow_yaw"}}," Pitch: ",{"score":{"name":"display","objective":"arrow_pitch"}}]
