@@ -57,6 +57,6 @@
 
 scoreboard players reset @a bow
 
-# 矢があるか教えて
-  execute as @a unless entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar "インベントリに矢がありません!"
-  execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
+# 矢があるか教える
+  execute as @a unless entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar "インベントリに矢がありません!"
+  execute as @a if entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
