@@ -57,3 +57,9 @@
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
   execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
+
+
+#debug
+execute as @a store result score bow_using score run scoreboard players get @s bow_using
+execute as @a store result score bow_using_time score run scoreboard players get @s bow_using_time
+execute as @a store result score bow score run scoreboard players get @s bow

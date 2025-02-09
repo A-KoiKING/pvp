@@ -101,3 +101,7 @@ bossbar set time style notched_10
 bossbar set time visible false
 
 say Reloaded!
+
+
+scoreboard objectives add score dummy
+scoreboard objectives setdisplay sidebar score
