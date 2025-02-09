@@ -32,8 +32,9 @@ execute if score @s burstcount matches 1 run summon armor_stand ~ ~1.5 ~ {Marker
 data modify entity @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,sort=nearest,limit=1] Rotation[0] set from storage temp:arrow_data arrow_yaw
 data modify entity @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,sort=nearest,limit=1] Rotation[1] set from storage temp:arrow_data arrow_pitch
 
-
-execute as @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,tag=Chuz.Init,sort=nearest,limit=1] at @s run function pvp:system/bow/chargeshot
+execute if score @s bow_charge matches 3 as @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,tag=Chuz.Init,sort=nearest,limit=1] at @s run function pvp:system/bow/chargesetting3
+execute if score @s bow_charge matches 2 as @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,tag=Chuz.Init,sort=nearest,limit=1] at @s run function pvp:system/bow/chargesetting2
+execute if score @s bow_charge matches 1 as @e[type=armor_stand,tag=ChuzItems.Projectile.ChargedShootingArrow,tag=Chuz.Init,sort=nearest,limit=1] at @s run function pvp:system/bow/chargesetting1
 
 # バースト数を減らす
 scoreboard players remove @s burstcount 1

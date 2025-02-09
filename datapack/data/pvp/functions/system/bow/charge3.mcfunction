@@ -1,5 +1,6 @@
 #矢の装填数を設定
 scoreboard players set @s burstcount 10
+scoreboard players set @s bow_charge 3
 
 # 矢の情報を取得
 data modify storage temp:arrow_data arrow_yaw set from entity @e[type=arrow,sort=nearest,limit=1] Rotation[0]
