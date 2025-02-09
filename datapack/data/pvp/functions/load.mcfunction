@@ -38,6 +38,7 @@ scoreboard objectives add kill playerKillCount
 # bow
 scoreboard objectives add arrow_yaw dummy
 scoreboard objectives add arrow_pitch dummy
+scoreboard objectives add bow_using dummy
 scoreboard objectives add bow_using_time dummy
 
 # hp_bar
@@ -70,9 +71,8 @@ scoreboard players set @a MPcount 2000
 
 scoreboard players set $play play_pvp 0
 
-# -1 を保存する仮想プレイヤーを設定
-scoreboard players set #neg arrow_pitch -1
-scoreboard players set #neg arrow_yaw -1
+scoreboard players set @a bow_using 0
+scoreboard players set @a bow_using_time 0
 
 #初期リス固定
 setworldspawn 0 180 0

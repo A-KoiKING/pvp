@@ -53,10 +53,6 @@
   execute as @a at @s run function pvp:system/bow/shot
   execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
 
-execute as @a if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
-execute as @a if score @s bow matches 1.. run scoreboard players set @s bow 0
-scoreboard players reset @a bow
-
 # 矢があるか教える
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
   execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
