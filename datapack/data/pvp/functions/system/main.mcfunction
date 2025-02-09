@@ -58,6 +58,6 @@ execute as @a if score @s bow matches 1.. run scoreboard players set @s bow 0
 scoreboard players reset @a bow
 
 # 矢があるか教える
-  execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar "インベントリに矢がありません!"
+  execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"dark_red"}
   execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
