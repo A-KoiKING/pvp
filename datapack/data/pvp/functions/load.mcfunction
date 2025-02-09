@@ -38,6 +38,7 @@ scoreboard objectives add kill playerKillCount
 # bow
 scoreboard objectives add arrow_yaw dummy
 scoreboard objectives add arrow_pitch dummy
+scoreboard objectives add bow_using_time dummy
 
 # hp_bar
 scoreboard objectives add mh.hp dummy
