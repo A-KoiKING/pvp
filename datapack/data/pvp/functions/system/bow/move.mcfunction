@@ -12,8 +12,8 @@
     scoreboard players remove @s bow.range 1
 
 # ダメージ
-    execute as @e[type=minecraft:armor_stand,tag=ammo] at @e[type=minecraft:armor_stand,tag=ammo] positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] 5
-    execute as @e[type=minecraft:armor_stand,tag=ammo] at @e[type=minecraft:armor_stand,tag=ammo] positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] run kill
+    execute as @e[type=minecraft:armor_stand,tag=ammo] at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] 5
+    execute as @e[type=minecraft:armor_stand,tag=ammo] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] run kill
 
 # 壁の衝突判定
     execute unless block ^ ^ ^0.5 #pvp:no_wall run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 0.05
