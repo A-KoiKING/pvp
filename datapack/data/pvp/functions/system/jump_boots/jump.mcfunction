@@ -1,13 +1,13 @@
 #強さ調整
 execute if score @s can_jump matches 20..39 run scoreboard players set $strength delta.api.launch 7000
 
-execute if score @s can_jump matches 40..59 run scoreboard players set $strength delta.api.launch 9000
+execute if score @s can_jump matches 40..49 run scoreboard players set $strength delta.api.launch 9000
 
-execute if score @s can_jump matches 60..79 run scoreboard players set $strength delta.api.launch 11000
+execute if score @s can_jump matches 50..59 run scoreboard players set $strength delta.api.launch 11000
 
-execute if score @s can_jump matches 80..99 run scoreboard players set $strength delta.api.launch 13000
+execute if score @s can_jump matches 60..64 run scoreboard players set $strength delta.api.launch 13000
 
-execute if score @s can_jump matches 100.. run scoreboard players set $strength delta.api.launch 15000
+execute if score @s can_jump matches 70.. run scoreboard players set $strength delta.api.launch 15000
 
 #跳ぶ
 function delta:api/launch_looking
