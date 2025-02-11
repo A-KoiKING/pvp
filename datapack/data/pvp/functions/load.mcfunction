@@ -41,6 +41,7 @@ scoreboard objectives add arrow_pitch dummy
 scoreboard objectives add bow_using dummy
 scoreboard objectives add bow_using_time dummy
 scoreboard objectives add bow_charge dummy
+scoreboard objectives add -1 dummy
 
 # hp_bar
 scoreboard objectives add mh.hp dummy
@@ -60,6 +61,7 @@ scoreboard objectives add hp_time dummy
 #初期化
 scoreboard players set $strength delta.api.launch 5000
 
+scoreboard players set #-1 -1 -1
 scoreboard players set @a MPMax 100
 scoreboard players set #1000 XPBar 1000
 scoreboard players set #6 XPBar 6
@@ -103,6 +105,6 @@ bossbar set time visible false
 
 say Reloaded!
 
-
+scoreboard objectives remove score
 scoreboard objectives add score dummy
 scoreboard objectives setdisplay sidebar score
