@@ -49,14 +49,14 @@
 
 # bow
  # 飛び道具チェック 
-
   execute as @a at @s run function pvp:system/bow/shot
   execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
-
-# 矢があるか教える
+ # 矢があるか教える
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
   execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
+ # 盾を構えているかのtagを全削除
+  tag @a remove shielding
 
 
 #debug

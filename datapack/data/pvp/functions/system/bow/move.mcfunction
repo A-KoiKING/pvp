@@ -13,9 +13,11 @@
 
 # ダメージ
     # プレイヤー
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] run kill
-
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] run kill
+    # プレイヤー(盾を構えているとき)
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] 1 pvp:bow_damage
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] run kill
     # モブ
     execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
     execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] run kill
