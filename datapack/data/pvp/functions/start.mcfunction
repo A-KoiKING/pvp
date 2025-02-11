@@ -15,6 +15,12 @@ effect give @a slow_falling 3 1 true
 
 clear @a
 
+execute store result score $system PlayerCount run title @a title {"text":""}
+scoreboard players set @a DeathCount 0
+scoreboard players set $system DeathCount 1
+
+scoreboard players set @a kill 0
+
 item replace entity @a weapon.offhand with shield
 item replace entity @a hotbar.0 with iron_sword
 item replace entity @a hotbar.1 with bow

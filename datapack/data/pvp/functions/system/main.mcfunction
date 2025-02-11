@@ -69,5 +69,9 @@
  # 盾を構えているかのtagを全削除
   tag @a remove shielding
 
+# 試合終了検知
+ execute as @a run scoreboard players operation $system DeathCount += @s DeathCount
+ execute if score $system DeathCount = $system PlayerCount run function pvp:finish
+
 
 #debug

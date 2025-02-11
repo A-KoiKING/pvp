@@ -35,6 +35,8 @@ scoreboard objectives add bow.range dummy
 scoreboard objectives add recursion dummy
 
 scoreboard objectives add kill playerKillCount
+scoreboard objectives add PlayerCount dummy
+scoreboard objectives add DeathCount deathCount
 
 # bow
 scoreboard objectives add arrow_yaw dummy
@@ -60,6 +62,8 @@ scoreboard objectives add hp_before dummy
 scoreboard objectives add hp_time dummy
 
 #初期化
+scoreboard objectives setdisplay list kill
+
 scoreboard players set $strength delta.api.launch 5000
 
 scoreboard players set #-1 -1 -1
