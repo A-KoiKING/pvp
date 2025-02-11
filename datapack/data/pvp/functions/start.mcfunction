@@ -5,10 +5,10 @@ time set day
 weather clear
 
 effect clear @a
-effect give @a minecraft:saturation infinite 0 true
-effect give @a minecraft:health_boost infinite 14 true
-effect give @a minecraft:instant_health 1 20 true
-effect give @a minecraft:resistance 8 5 true
+effect give @a saturation infinite 0 true
+effect give @a health_boost infinite 14 true
+effect give @a instant_health 1 20 true
+effect give @a resistance 8 5 true
 effect give @a glowing infinite 0 true
 effect give @a night_vision infinite 0 true
 effect give @a slow_falling 3 1 true
