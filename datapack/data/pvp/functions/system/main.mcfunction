@@ -40,6 +40,8 @@
 
 # 死んだらスペクテイターに変更
  execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run gamemode spectator @s
+ execute as @a[scores={death=1..}] run effect give @s health_boost infinite 14 true
+ execute as @a[scores={death=1..}] run effect give @s instant_health infinite 20 true
  execute as @a[scores={death=1..}] if score $play play_pvp matches 1 run scoreboard players set @s death 0
 
 # shield_reset
