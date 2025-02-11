@@ -62,7 +62,7 @@ scoreboard players add @a can_title 1
 scoreboard players set @a potion_cooltime 0
 
 spreadplayers 0 0 150 200 false @a
-execute as @a at @s run tp @s ~ 180 ~
+execute as @a at @s run tp @s ~ 220 ~
 
 scoreboard players set @a MPMax 100
 scoreboard players set @a points 0
