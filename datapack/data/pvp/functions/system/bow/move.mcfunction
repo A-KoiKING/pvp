@@ -12,8 +12,13 @@
     scoreboard players remove @s bow.range 1
 
 # ダメージ
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=3..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=3..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] run kill
+    # プレイヤー
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest] run kill
+
+    # モブ
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] 5 pvp:bow_damage
+    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest] run kill
 
 # 壁の衝突判定
     execute unless block ^ ^ ^0.5 #pvp:no_wall run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 0.05

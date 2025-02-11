@@ -60,6 +60,3 @@
 
 
 #debug
-execute as @a store result score bow_using score run scoreboard players get @s bow_using
-execute as @a store result score bow_using_time score run scoreboard players get @s bow_using_time
-execute as @a store result score bow score run scoreboard players get @s bow
