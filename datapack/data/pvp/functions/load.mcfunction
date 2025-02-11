@@ -20,6 +20,7 @@ scoreboard objectives add 20 dummy
 scoreboard objectives add death deathCount
 scoreboard objectives add play_pvp dummy
 scoreboard objectives add playtime dummy
+scoreboard objectives add heal_ticket dummy
 
 scoreboard objectives add can_shield dummy
 scoreboard objectives add shield_jump dummy
