@@ -39,7 +39,7 @@
   {
     "function": "minecraft:set_enchantments",
     "enchantments": {
-      "minecraft:efficiency": 5,
+      "minecraft:efficiency": 7,
       "minecraft:vanishing_curse": 1
     }
   },
