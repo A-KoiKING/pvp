@@ -1,0 +1,5 @@
+{
+    "death.attack.bow_damage": "%1$sは撃ち抜かれた",
+    "death.attack.bow_damage.player": "%1$sは%2$sに撃ち抜かれた",
+    "death.attack.bow_damage.item": "%1$sは%2$sに%3$sで撃ち抜かれた"
+  }

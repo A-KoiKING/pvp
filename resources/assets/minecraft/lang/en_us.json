@@ -1,0 +1,5 @@
+{
+  "death.attack.bow_damage": "%1$s was shot through",
+  "death.attack.bow_damage.player": "%1$s was shot through by %2$s",
+  "death.attack.bow_damage.item": "%1$s was shot through by %2$s using %3$s"
+}
