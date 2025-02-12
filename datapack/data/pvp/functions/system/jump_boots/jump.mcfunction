@@ -5,7 +5,7 @@ execute if score @s can_jump matches 40..49 run scoreboard players set $strength
 
 execute if score @s can_jump matches 50..59 run scoreboard players set $strength delta.api.launch 11000
 
-execute if score @s can_jump matches 60..64 run scoreboard players set $strength delta.api.launch 13000
+execute if score @s can_jump matches 60..69 run scoreboard players set $strength delta.api.launch 13000
 
 execute if score @s can_jump matches 70.. run scoreboard players set $strength delta.api.launch 15000
 
