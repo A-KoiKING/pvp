@@ -72,6 +72,7 @@
 # 試合終了検知
  execute as @a run scoreboard players operation $system DeathCount += @s DeathCount
  execute unless score $system PlayerCount matches 1 if score $system DeathCount = $system PlayerCount run function pvp:finish
+ execute if score $system PlayerCount matches 1 if score $system DeathCount matches 1 run function pvp:finish
 
 
 #debug
