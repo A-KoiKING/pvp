@@ -41,7 +41,6 @@ item modify entity @a inventory.26 pvp:arrow
 
 worldborder set 10000
 
-scoreboard players add @a can_title 1
 scoreboard players set @a potion_cooltime 0
 
 scoreboard players set @a MPMax 100
@@ -55,9 +54,6 @@ scoreboard players set @a hp_max 80
 scoreboard players set @a hp_value 0
 scoreboard players set @a hp_time 0
 scoreboard players set @a hp_before 80
-
-scoreboard players set @a death 0
-scoreboard players set $play play_pvp 1
 
 scoreboard players set @a can_shield 0
 scoreboard players set @a shield_jump 0
