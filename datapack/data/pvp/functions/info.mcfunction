@@ -1,1 +1,1 @@
-tell @a v.0.1.5
+tellraw @a {"text":"v.0.1.6"}
