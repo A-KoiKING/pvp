@@ -1,4 +1,6 @@
 #ゲームモードを変更する
+execute as @a run function pvp:system/uuid/setting
+
 gamemode survival @a
 
 time set day

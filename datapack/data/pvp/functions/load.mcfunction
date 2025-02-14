@@ -108,8 +108,19 @@ bossbar set time max 12000
 bossbar set time style notched_10
 bossbar set time visible false
 
+# UUID
+execute unless entity 3ecf96f6-5342-4ab1-a629-10926cea8230 run summon item_display ~ ~ ~ {UUID:[I;1053791990,1396853425,-1507258222,1827308080]}
+scoreboard objectives add UUID.0 dummy
+scoreboard objectives add UUID.1 dummy
+scoreboard objectives add UUID.2 dummy
+scoreboard objectives add UUID.3 dummy
+
+# プレイヤーのUUIDをスコアボードに設定
+execute as @a run function pvp:system/uuid/setting
+
 say Reloaded!
 
+# debug用スコアボード
 scoreboard objectives remove score
 scoreboard objectives add score dummy
 scoreboard objectives setdisplay sidebar score
