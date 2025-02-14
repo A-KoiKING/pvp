@@ -1,6 +1,7 @@
 gamemode creative @a
 
 effect clear @a
+effect give @a night_vision infinite 0 true
 
 worldborder set 400
 
