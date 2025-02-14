@@ -37,8 +37,6 @@ execute as @a[scores={burstcount=1..}] store result storage temp:arrow_data arro
 execute as @a[scores={burstcount=1..}] at @s run data modify entity @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] Rotation[0] set from storage temp:arrow_data arrow_yaw
 execute as @a[scores={burstcount=1..}] at @s run data modify entity @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] Rotation[1] set from storage temp:arrow_data arrow_pitch
 
-execute as @a[scores={burstcount=1..}] at @s run data modify entity @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] Rotation[0] set from entity @s[scores={arrow_pitch=1..}]
-
 execute as @a[scores={burstcount=1..}] at @s if score @s bow_charge matches 3 as @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] at @s run function pvp:system/bow/chargesetting3
 execute as @a[scores={burstcount=1..}] at @s if score @s bow_charge matches 2 as @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] at @s run function pvp:system/bow/chargesetting2
 execute as @a[scores={burstcount=1..}] at @s if score @s bow_charge matches 1 as @e[type=armor_stand,tag=ammo,sort=nearest,limit=1,tag=!using_bow.count] at @s run function pvp:system/bow/chargesetting1
