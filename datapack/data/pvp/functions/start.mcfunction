@@ -56,7 +56,7 @@ item modify entity @a inventory.26 pvp:arrow
 
 recipe give @a *
 
-worldborder set 400
+worldborder set 256
 worldborder set 20 600
 worldborder damage amount 5
 worldborder damage buffer 3
