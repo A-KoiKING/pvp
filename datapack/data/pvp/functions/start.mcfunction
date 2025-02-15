@@ -3,6 +3,17 @@ execute as @a run function pvp:system/uuid/setting
 
 gamemode survival @a
 
+# Minecraft
+advancement revoke @a from minecraft:story/root
+# 農業
+advancement revoke @a from minecraft:husbandry/root
+# ジ・エンド
+advancement revoke @a from minecraft:end/root
+# 冒険
+advancement revoke @a from minecraft:adventure/root
+# ネザー
+advancement revoke @a from minecraft:nether/root
+
 time set day
 weather clear
 
