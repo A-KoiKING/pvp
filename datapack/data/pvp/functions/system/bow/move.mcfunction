@@ -14,25 +14,28 @@
     scoreboard players remove @s recursion 1
     scoreboard players remove @s bow.range 1
 
-# 矢にプレイヤーのUUIDをセット
-    execute as @s[tag=!using_bow.count] run function pvp:system/bow/attack_player
+# 弾のUUIDを一時スコアに保存 (@s=弾、弾にはshot.mcfunctionで射手のUUIDがセット済み)
+    execute store result score $ammo UUID.0 run scoreboard players get @s UUID.0
+    execute store result score $ammo UUID.1 run scoreboard players get @s UUID.1
+    execute store result score $ammo UUID.2 run scoreboard players get @s UUID.2
+    execute store result score $ammo UUID.3 run scoreboard players get @s UUID.3
 
-# ダメージ処理
-    execute as @a at @s run function pvp:system/bow/bow_damage
+# ダメージ処理 (各プレイヤーのUUIDと弾のUUIDを照合して射手を特定)
+    execute as @a run function pvp:system/bow/bow_damage
 
-# ダメージ
+# ダメージ (この弾自身のみ処理、@s=弾)
     # プレイヤー
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 2 pvp:bow_damage by @p[tag=using_bow_player]
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @p[tag=using_bow_player] run playsound block.amethyst_cluster.hit master @p[tag=using_bow_player] ~ ~ ~ 1 2
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 2 pvp:bow_damage by @a[tag=using_bow_player,limit=1]
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @a[tag=using_bow_player,limit=1] run playsound block.amethyst_cluster.hit master @a[tag=using_bow_player,limit=1] ~ ~ ~ 1 2
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill @s
     # プレイヤー(盾を構えているとき)
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 0.5 pvp:bow_damage by @p[tag=using_bow_player]
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @p[tag=using_bow_player] run playsound block.amethyst_cluster.hit master @p[tag=using_bow_player] ~ ~ ~ 1 2
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 0.5 pvp:bow_damage by @a[tag=using_bow_player,limit=1]
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @a[tag=using_bow_player,limit=1] run playsound block.amethyst_cluster.hit master @a[tag=using_bow_player,limit=1] ~ ~ ~ 1 2
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill @s
     # モブ
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 4 pvp:bow_damage by @p[tag=using_bow_player]
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @p[tag=using_bow_player] run playsound block.amethyst_cluster.hit master @p[tag=using_bow_player] ~ ~ ~ 1 2
-    execute as @e[type=minecraft:armor_stand,tag=ammo,scores={bow.count=2..}] at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 run damage @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 4 pvp:bow_damage by @a[tag=using_bow_player,limit=1]
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @a[tag=using_bow_player,limit=1] run playsound block.amethyst_cluster.hit master @a[tag=using_bow_player,limit=1] ~ ~ ~ 1 2
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[type=!minecraft:armor_stand,type=!minecraft:player,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill @s
 
 # 壁の衝突判定
     execute unless block ^ ^ ^0.5 #pvp:no_wall run playsound minecraft:entity.generic.extinguish_fire master @a ~ ~ ~ 0.05

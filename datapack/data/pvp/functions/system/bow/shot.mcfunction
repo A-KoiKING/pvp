@@ -17,29 +17,40 @@ scoreboard players add @s bow_using 1
 execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 20.. run function pvp:system/bow/charge3
 execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 8..19 run function pvp:system/bow/charge2
 execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 0..8 run function pvp:system/bow/charge1
-execute at @s if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
+execute if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
 
 # 矢を削除
-execute as @a at @s run kill @e[type=arrow,sort=nearest,limit=1]
+execute if score @s bow matches 1.. at @s run kill @e[type=arrow,sort=nearest,limit=1]
 
-# 10回弾を生成
-execute as @s at @s if score @s burstcount matches 10 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 9 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 8 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 7 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 6 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 5 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 4 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 3 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 2 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-execute as @s at @s if score @s burstcount matches 1 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo"]}
-
+# 既存の弾にusing_bow.countタグを追加
 execute as @e[type=armor_stand,tag=ammo] if score @s bow.count matches 1.. run tag @s add using_bow.count
 
+# 弾を生成 (just_spawnedタグで新弾を識別)
+execute at @s if score @s burstcount matches 10 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 9 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 8 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 7 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 6 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 5 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 4 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 3 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 2 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 1 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+
+# 新しい弾に射手のUUIDをセット (@s=プレイヤーなので正確)
+scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.0 = @s UUID.0
+scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.1 = @s UUID.1
+scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.2 = @s UUID.2
+scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.3 = @s UUID.3
+
 # 向きを復元
-execute as @a[scores={burstcount=1..}] at @s run function pvp:system/bow/restorerotation
+execute if score @s burstcount matches 1.. at @s run function pvp:system/bow/restorerotation
+
+# just_spawnedタグを削除 (次のプレイヤーの処理に影響しないように)
+tag @e[type=armor_stand,tag=just_spawned] remove just_spawned
 
 # バースト数を減らす
 scoreboard players remove @s[scores={burstcount=1..}] burstcount 1
 
-execute as @a[scores={bow=1..}] run scoreboard players set @a bow 0
+# bowスコアをリセット
+execute if score @s bow matches 1.. run scoreboard players set @s bow 0
