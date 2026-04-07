@@ -4,8 +4,8 @@ execute if score @s bow_using matches 1.. run scoreboard players set @s bow_usin
 
 # チャージ段階ごとの効果音再生
 execute if score @s bow_using_time matches 3 run playsound minecraft:bow_charge player @s ~ ~ ~ 1 1
-execute if score @s bow_using_time matches 8 run playsound minecraft:bow_charge player @s ~ ~ ~ 1 1.5
-execute if score @s bow_using_time matches 20 run playsound minecraft:bow_charge player @s ~ ~ ~ 1 2
+execute if score @s bow_using_time matches 10 run playsound minecraft:bow_charge player @s ~ ~ ~ 1 1.5
+execute if score @s bow_using_time matches 30 run playsound minecraft:bow_charge player @s ~ ~ ~ 1 2
 
 # 流石に10分引いてたらヤバそうだからリセット
 execute if score @s bow_using matches 12000 run scoreboard players set @s bow_using 1
@@ -14,9 +14,9 @@ execute if score @s bow_using matches 12000 run scoreboard players set @s bow_us
 scoreboard players add @s bow_using 1
 
 # 弓を撃ったことを検知
-execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 20.. run function pvp:system/bow/charge3
-execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 8..19 run function pvp:system/bow/charge2
-execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 0..8 run function pvp:system/bow/charge1
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 30.. run function pvp:system/bow/charge3
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 10..29 run function pvp:system/bow/charge2
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 0..9 run function pvp:system/bow/charge1
 execute if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
 
 # 矢を削除
