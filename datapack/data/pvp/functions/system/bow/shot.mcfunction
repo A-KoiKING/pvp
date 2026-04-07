@@ -14,10 +14,10 @@ execute if score @s bow_using matches 12000 run scoreboard players set @s bow_us
 scoreboard players add @s bow_using 1
 
 # 弓を撃ったことを検知
-execute as @a at @s if score @s bow matches 1.. if score @s bow_using_time matches 20.. run function pvp:system/bow/charge3
-execute as @a at @s if score @s bow matches 1.. if score @s bow_using_time matches 8..19 run function pvp:system/bow/charge2
-execute as @a at @s if score @s bow matches 1.. if score @s bow_using_time matches 0..8 run function pvp:system/bow/charge1
-execute as @a at @s if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 20.. run function pvp:system/bow/charge3
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 8..19 run function pvp:system/bow/charge2
+execute at @s if score @s bow matches 1.. if score @s bow_using_time matches 0..8 run function pvp:system/bow/charge1
+execute at @s if score @s bow matches 1.. run scoreboard players set @s bow_using_time 0
 
 # 矢を削除
 execute as @a at @s run kill @e[type=arrow,sort=nearest,limit=1]
