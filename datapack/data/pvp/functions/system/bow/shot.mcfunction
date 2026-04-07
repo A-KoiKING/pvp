@@ -25,7 +25,7 @@ execute if score @s bow matches 1.. at @s run kill @e[type=arrow,sort=nearest,li
 # 既存の弾にusing_bow.countタグを追加
 execute as @e[type=armor_stand,tag=ammo] if score @s bow.count matches 1.. run tag @s add using_bow.count
 
-# 弾を生成 (just_spawnedタグで新弾を識別)
+# 弾を生成
 execute at @s if score @s burstcount matches 10 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
 execute at @s if score @s burstcount matches 9 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
 execute at @s if score @s burstcount matches 8 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
@@ -37,7 +37,7 @@ execute at @s if score @s burstcount matches 3 run summon armor_stand ~ ~1.5 ~ {
 execute at @s if score @s burstcount matches 2 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
 execute at @s if score @s burstcount matches 1 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
 
-# 新しい弾に射手のUUIDをセット (@s=プレイヤーなので正確)
+# 新しい弾に射手のUUIDをセット
 scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.0 = @s UUID.0
 scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.1 = @s UUID.1
 scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.2 = @s UUID.2
