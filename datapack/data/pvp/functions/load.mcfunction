@@ -38,6 +38,7 @@ scoreboard objectives add kill playerKillCount
 scoreboard objectives add PlayerCount dummy
 scoreboard objectives add DeathCount deathCount
 scoreboard objectives add NoBowDamage minecraft.custom:minecraft.damage_dealt
+scoreboard objectives add BowDamage dummy
 scoreboard objectives add TmpDamage dummy
 scoreboard objectives add AllDamage dummy
 scoreboard objectives add 10 dummy
@@ -82,6 +83,7 @@ scoreboard players set @a MPcount 2000
 scoreboard players set $play play_pvp 0
 
 scoreboard players set @a NoBowDamage 0
+scoreboard players set @a BowDamage 0
 scoreboard players set @a TmpDamage 0
 scoreboard players set @a AllDamage 0
 scoreboard players set #10 10 10

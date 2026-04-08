@@ -96,6 +96,11 @@ scoreboard players set @a hp_before 80
 scoreboard players set @a death 0
 scoreboard players set $play play_pvp 1
 
+scoreboard players set @a NoBowDamage 0
+scoreboard players set @a BowDamage 0
+scoreboard players set @a TmpDamage 0
+scoreboard players set @a AllDamage 0
+
 scoreboard players set @a can_shield 0
 scoreboard players set @a shield_jump 0
 scoreboard players set @a before_shield 0

@@ -26,10 +26,12 @@
 # ダメージ
     # プレイヤー
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 2 pvp:bow_damage by @a[tag=using_bow_player,limit=1]
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] as @a[tag=using_bow_player,limit=1] run scoreboard players add @s BowDamage 20
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @a[tag=using_bow_player,limit=1] run playsound block.amethyst_cluster.hit master @a[tag=using_bow_player,limit=1] ~ ~ ~ 1 2
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=!shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill @s
     # プレイヤー(盾を構えているとき)
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 run damage @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] 0.5 pvp:bow_damage by @a[tag=using_bow_player,limit=1]
+    execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] as @a[tag=using_bow_player,limit=1] run scoreboard players add @s BowDamage 5
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] at @a[tag=using_bow_player,limit=1] run playsound block.amethyst_cluster.hit master @a[tag=using_bow_player,limit=1] ~ ~ ~ 1 2
     execute if score @s bow.count matches 2.. at @s positioned ~0 ~-0.8 ~0 if entity @e[tag=shielding,gamemode=!spectator,type=!minecraft:armor_stand,distance=..1,limit=1,sort=nearest,tag=!using_bow_player] run kill @s
     # モブ
