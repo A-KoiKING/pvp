@@ -63,5 +63,7 @@
  execute unless score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount = $system PlayerCount run function pvp:finish
  execute if score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount matches 2.. run function pvp:finish
 
+# ダメージ同期
+ execute as @a run function pvp:system/damage_sync
 
 #debug
