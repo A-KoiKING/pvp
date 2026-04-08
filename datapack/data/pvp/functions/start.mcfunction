@@ -101,6 +101,8 @@ scoreboard players set @a BowDamage 0
 scoreboard players set @a TmpDamage 0
 scoreboard players set @a AllDamage 0
 
+scoreboard players set @a KillCount 0
+
 scoreboard players set @a can_shield 0
 scoreboard players set @a shield_jump 0
 scoreboard players set @a before_shield 0

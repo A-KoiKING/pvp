@@ -36,12 +36,18 @@ scoreboard objectives add recursion dummy
 
 scoreboard objectives add kill playerKillCount
 scoreboard objectives add PlayerCount dummy
+
+# ダメージ表示用
 scoreboard objectives add DeathCount deathCount
 scoreboard objectives add NoBowDamage minecraft.custom:minecraft.damage_dealt
 scoreboard objectives add BowDamage dummy
 scoreboard objectives add TmpDamage dummy
 scoreboard objectives add AllDamage dummy
 scoreboard objectives add 10 dummy
+
+# kill表示用
+scoreboard objectives add KillCount playerKillCount
+scoreboard objectives add Display dummy
 
 # bow
 scoreboard objectives add arrow_yaw dummy
@@ -88,6 +94,8 @@ scoreboard players set @a TmpDamage 0
 scoreboard players set @a AllDamage 0
 scoreboard players set #10 10 10
 
+scoreboard players set @a KillCount 0
+
 scoreboard players set @a bow_using 0
 scoreboard players set @a bow_using_time 0
 
@@ -128,11 +136,6 @@ scoreboard objectives add UUID.3 dummy
 execute as @a run function pvp:system/uuid/setting
 
 # sidebarにダメージ表示
-scoreboard objectives setdisplay sidebar AllDamage
+scoreboard objectives setdisplay sidebar Display
 
 say Reloaded!
-
-# debug用スコアボード
-#scoreboard objectives remove score
-#scoreboard objectives add score dummy
-#scoreboard objectives setdisplay sidebar score

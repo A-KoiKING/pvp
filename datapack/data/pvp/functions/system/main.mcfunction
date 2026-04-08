@@ -46,24 +46,25 @@
  scoreboard players add @a before_shield 1
  execute as @a[scores={shield_jump=1}] run function pvp:system/shield/reset
 
+# ダメージ同期
+ execute as @a run function pvp:system/damage_sync
+
 # bow
  # 飛び道具チェック 
   execute as @a at @s run function pvp:system/bow/shot
   execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
  # 矢があるか教える
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
-  execute as @a if entity @s[nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ""
+
+  execute as @a if entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ["",{"text":"⚔ ","color":"white"},{"text":"Kill: ","color":"red"},{"score":{"name":"@s","objective":"KillCount"},"color":"white"},{"text":"  ❤ ","color":"aqua"},{"text":"Damage: ","color":"white"},{"score":{"name":"@s","objective":"AllDamage"},"color":"white"}]
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
  # 盾を構えているかのtagを全削除
   tag @a remove shielding
 
-# 試合終了検知
+# 試合終了検知(一番最後に実行する)
  scoreboard players set $system DeathCount 1
  execute as @a run scoreboard players operation $system DeathCount += @s DeathCount
  execute unless score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount = $system PlayerCount run function pvp:finish
  execute if score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount matches 2.. run function pvp:finish
-
-# ダメージ同期
- execute as @a run function pvp:system/damage_sync
 
 #debug
