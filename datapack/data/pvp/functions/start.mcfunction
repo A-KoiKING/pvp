@@ -108,7 +108,7 @@ scoreboard players set @a shield_jump 0
 scoreboard players set @a before_shield 0
 scoreboard players set @a shield_cooltime 0
 
-kill @e[type=armor_stand,tag=test]
+kill @e[tag=test]
 
 gamerule keepInventory false
 
