@@ -71,6 +71,6 @@
  execute as @e[tag=test, nbt={HurtTime:10s}] run scoreboard players set @s test_hp 0
  execute as @e[tag=test, nbt={HurtTime:10s}] run effect clear @s
  execute as @e[tag=test, nbt=!{Health:1000.0f}] run scoreboard players add @s test_hp 1
- execute as @e[tag=test] if score @s test_hp matches 100.. run effect give @s minecraft:regeneration 2 10 true
+ execute as @e[tag=test] if score @s test_hp matches 100.. run effect give @s minecraft:regeneration 2 15 true
 
 #debug
