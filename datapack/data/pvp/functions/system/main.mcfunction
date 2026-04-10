@@ -67,4 +67,10 @@
  execute unless score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount = $system PlayerCount run function pvp:finish
  execute if score $system PlayerCount matches 1 if score $play play_pvp matches 1 if score $system DeathCount matches 2.. run function pvp:finish
 
+# テスト村人の回復
+ execute as @e[tag=test, nbt={HurtTime:10s}] run scoreboard players set @s test_hp 0
+ execute as @e[tag=test, nbt={HurtTime:10s}] run effect clear @s
+ execute as @e[tag=test, nbt=!{Health:1000.0f}] run scoreboard players add @s test_hp 1
+ execute as @e[tag=test] if score @s test_hp matches 100.. run effect give @s minecraft:regeneration 2 10 true
+
 #debug

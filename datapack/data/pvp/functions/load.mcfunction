@@ -72,6 +72,9 @@ scoreboard objectives add hp_value dummy
 scoreboard objectives add hp_before dummy
 scoreboard objectives add hp_time dummy
 
+# 村人のHP回復
+scoreboard objectives add test_hp dummy
+
 #初期化
 scoreboard players set $strength delta.api.launch 5000
 
