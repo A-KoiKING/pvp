@@ -1,0 +1,10 @@
+execute at @s if score @s burstcount matches 10 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 9 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 8 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 7 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 6 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 5 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 4 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 3 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 2 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute at @s if score @s burstcount matches 1 run summon armor_stand ~ ~1.2 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}

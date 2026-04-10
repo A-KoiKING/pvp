@@ -26,16 +26,8 @@ execute if score @s bow matches 1.. at @s run kill @e[type=arrow,sort=nearest,li
 execute as @e[type=armor_stand,tag=ammo] if score @s bow.count matches 1.. run tag @s add using_bow.count
 
 # 弾を生成
-execute at @s if score @s burstcount matches 10 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 9 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 8 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 7 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 6 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 5 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 4 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 3 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 2 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
-execute at @s if score @s burstcount matches 1 run summon armor_stand ~ ~1.5 ~ {Marker:1b,Invisible:1b,Tags:["ammo","just_spawned"]}
+execute unless predicate pvp:sneak run function pvp:system/bow/ammo_gen_no_sneak
+execute if predicate pvp:sneak run function pvp:system/bow/ammo_gen_sneak
 
 # 新しい弾に射手のUUIDをセット
 scoreboard players operation @e[type=armor_stand,tag=just_spawned] UUID.0 = @s UUID.0
