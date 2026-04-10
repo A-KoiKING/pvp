@@ -3,9 +3,9 @@ execute if score @s bow_using matches 0 run scoreboard players add @s bow_using_
 execute if score @s bow_using matches 1.. run scoreboard players set @s bow_using_time 0
 
 # チャージ段階ごとの効果音再生
-execute if score @s bow_using_time matches 3 run playsound pvp:bow_charge player @s ~ ~ ~ 1 1
-execute if score @s bow_using_time matches 10 run playsound pvp:bow_charge player @s ~ ~ ~ 1 1.5
-execute if score @s bow_using_time matches 30 run playsound pvp:bow_charge player @s ~ ~ ~ 1 2
+execute if score @s bow_using_time matches 3 run playsound pvp:bow_charge master @s ~ ~ ~ 1 1
+execute if score @s bow_using_time matches 10 run playsound pvp:bow_charge master @s ~ ~ ~ 1 1.5
+execute if score @s bow_using_time matches 30 run playsound pvp:bow_charge master @s ~ ~ ~ 1 2
 
 # 流石に10分引いてたらヤバそうだからリセット
 execute if score @s bow_using matches 12000 run scoreboard players set @s bow_using 1

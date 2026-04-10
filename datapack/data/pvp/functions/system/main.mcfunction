@@ -56,7 +56,7 @@
  # 矢があるか教える
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
 
-  execute as @a if entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ["",{"text":"⚔ ","color":"white"},{"text":"Kill: ","color":"red"},{"score":{"name":"@s","objective":"KillCount"},"color":"white"},{"text":"  ❤ ","color":"aqua"},{"text":"Damage: ","color":"white"},{"score":{"name":"@s","objective":"AllDamage"},"color":"white"}]
+  execute as @a if entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ["",{"text":"⚔ ","color":"red"},{"text":"Kill: ","color":"red"},{"score":{"name":"@s","objective":"KillCount"},"color":"white"},{"text":"  ❤ ","color":"aqua"},{"text":"Damage: ","color":"aqua"},{"score":{"name":"@s","objective":"AllDamage"},"color":"white"}]
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
  # 盾を構えているかのtagを全削除
   tag @a remove shielding
