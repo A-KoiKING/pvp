@@ -46,16 +46,16 @@
  scoreboard players add @a before_shield 1
  execute as @a[scores={shield_jump=1}] run function pvp:system/shield/reset
 
-# ダメージ同期
- execute as @a run function pvp:system/damage_sync
-
 # bow
  # 飛び道具チェック 
   execute as @a at @s run function pvp:system/bow/shot
   execute as @e[type=armor_stand,tag=ammo] at @s run function pvp:system/bow/bow
+
+# ダメージ同期
+ execute as @a run function pvp:system/damage_sync
+
  # 矢があるか教える
   execute as @a if entity @s[gamemode=survival,nbt=!{Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar {"text":"インベントリに矢がありません!","color":"yellow"}
-
   execute as @a if entity @s[gamemode=survival,nbt={Inventory:[{id:"minecraft:arrow"}]}] run title @s actionbar ["",{"text":"⚔ ","color":"red"},{"text":"Kill: ","color":"red"},{"score":{"name":"@s","objective":"KillCount"},"color":"white"},{"text":"  ❤ ","color":"aqua"},{"text":"Damage: ","color":"aqua"},{"score":{"name":"@s","objective":"AllDamage"},"color":"white"}]
   execute as @a if entity @s[gamemode=!survival] run title @s actionbar ""
  # 盾を構えているかのtagを全削除
