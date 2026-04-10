@@ -1,6 +1,5 @@
 {
   "bow_charge": {
-    "category": "master",
     "sounds": [
       {
         "name": "bow/charge"
