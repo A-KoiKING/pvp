@@ -1,12 +1,27 @@
+#ゲームモードを変更する
+execute as @a run function pvp:system/uuid/setting
+
+gamemode survival @a
+
 time set day
 weather clear
 
-effect give @a minecraft:saturation infinite 0 true
-effect give @a minecraft:health_boost infinite 14 true
-effect give @a minecraft:instant_health 1 20 true
+effect clear @a
+effect give @a saturation infinite 0 true
+effect give @a health_boost infinite 14 true
+effect give @a instant_health 1 20 true
+effect give @a resistance 8 5 true
+effect give @a glowing infinite 0 true
 effect give @a night_vision infinite 0 true
+effect give @a slow_falling 3 1 true
 
 clear @a
+
+execute store result score $system PlayerCount run title @a title {"text":""}
+scoreboard players set @a DeathCount 0
+scoreboard players set $system DeathCount 1
+
+scoreboard players set @a kill 0
 
 item replace entity @a weapon.offhand with shield
 item replace entity @a hotbar.0 with iron_sword
@@ -52,6 +67,16 @@ scoreboard players set @a hp_max 80
 scoreboard players set @a hp_value 0
 scoreboard players set @a hp_time 0
 scoreboard players set @a hp_before 80
+
+scoreboard players set @a death 0
+scoreboard players set $play play_pvp 1
+
+scoreboard players set @a NoBowDamage 0
+scoreboard players set @a BowDamage 0
+scoreboard players set @a TmpDamage 0
+scoreboard players set @a AllDamage 0
+
+scoreboard players set @a KillCount 0
 
 scoreboard players set @a can_shield 0
 scoreboard players set @a shield_jump 0
