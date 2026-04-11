@@ -108,8 +108,6 @@ scoreboard players set @e[distance=0..,tag=test,type=villager] test_hp 0
 setworldspawn 0 180 0
 
 #ワールドボーダー初期化
-worldborder center 0 0
-
 data merge storage pvp:center {x:0,z:0}
 
 #ゲームルール変更
