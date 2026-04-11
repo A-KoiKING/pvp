@@ -70,6 +70,8 @@ worldborder set 20 600
 worldborder damage amount 5
 worldborder damage buffer 3
 worldborder warning distance 20
+function pvp:system/center with storage pvp:center
+execute as @a at @s run tp @s ~ ~100 ~
 
 scoreboard players set $second playtime 12150
 bossbar set time players @a
@@ -77,9 +79,6 @@ bossbar set time visible true
 
 scoreboard players add @a can_title 1
 scoreboard players set @a potion_cooltime 0
-
-spreadplayers 0 0 50 128 false @a
-execute as @a at @s run tp @s ~ ~100 ~
 
 scoreboard players set @a MPMax 100
 scoreboard players set @a points 0

@@ -110,6 +110,8 @@ setworldspawn 0 180 0
 #ワールドボーダー初期化
 worldborder center 0 0
 
+data merge storage pvp:center {x:0,z:0}
+
 #ゲームルール変更
 gamerule keepInventory true
 gamerule naturalRegeneration false
