@@ -102,7 +102,7 @@ scoreboard players set @a KillCount 0
 scoreboard players set @a bow_using 0
 scoreboard players set @a bow_using_time 0
 
-scoreboard players set @e[tag=test] test_hp 0
+scoreboard players set @e[distance=0..,tag=test,type=villager] test_hp 0
 
 #初期リス固定
 setworldspawn 0 180 0

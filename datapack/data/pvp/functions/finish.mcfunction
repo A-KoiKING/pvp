@@ -1,3 +1,5 @@
+scoreboard players set @a heal_ticket 1
+
 gamemode creative @a
 
 effect clear @a
@@ -24,4 +26,4 @@ scoreboard players set $second playtime 0
 
 scoreboard players set $play play_pvp 0
 
-kill @e[type=armor_stand,tag=HP]
+kill @e[distance=0..,tag=HP,type=armor_stand]

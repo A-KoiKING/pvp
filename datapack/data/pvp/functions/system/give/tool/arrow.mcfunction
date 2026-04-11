@@ -1,5 +1,4 @@
-execute unless predicate pvp:none_offhand run tellraw @s "オフハンドにアイテムを持っています"
-execute unless predicate pvp:none_offhand run return 0
+execute unless predicate pvp:none_offhand run function pvp:system/give/fail
 clear @p arrow{HideFlags:7}
 item replace entity @p weapon.offhand with arrow
 item modify entity @p weapon.offhand pvp:arrow

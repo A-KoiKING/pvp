@@ -6,7 +6,6 @@ execute at @s if score @s can_shield matches 20 run playsound minecraft:block.an
 summon armor_stand ^ ^ ^1 {Marker:true,NoGravity:true,Tags:["dig"]}
 
 execute as @e[tag=dig,distance=0..,type=armor_stand] at @s run fill ~1 ~2 ~2 ~-1 ~ ~-1 air destroy
-execute as @e[tag=dig,distance=0..,type=armor_stand] at @s run fill ~1 ~2 ~2 ~-1 ~ ~-1 bedrock replace air
 
 #跳躍
 execute if score @s can_shield matches 20 run function delta:api/launch_looking

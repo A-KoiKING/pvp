@@ -10,6 +10,7 @@ scoreboard players operation @s hp_value /= @s hp_max
 scoreboard players operation @s hp_before -= @s hp
 execute as @s[scores={hp_before=..-1,hp_before=1..}] run scoreboard players set @s hp_time 100
 
+# warn-off execute-group
 execute as @s[scores={hp_time=1..}] run scoreboard players remove @s hp_time 1
 execute as @s[scores={hp_time=1..}] at @s[scores={hp_time=1..}] run function pvp:system/hp_bar/player/display
 

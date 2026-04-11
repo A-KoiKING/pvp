@@ -108,7 +108,7 @@ scoreboard players set @a shield_jump 0
 scoreboard players set @a before_shield 0
 scoreboard players set @a shield_cooltime 0
 
-kill @e[tag=test]
+kill @e[distance=0..,tag=test,type=villager]
 
 gamerule keepInventory false
 
